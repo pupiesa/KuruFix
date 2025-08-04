@@ -1,16 +1,3 @@
-// "use client"
-
-// import { useSession,signIn,signOut } from 'next-auth/react';
-
-// export default function HomePage() {
-//   const { data: sessios, status } = useSession();
-
-//   if (status === "authenticated") {
-//     return <p>Signed in as {session.user.email}</p>
-//   }
-
-//   return <button onClick={() => signIn('google')}>signin</button>
-// }
 "use client";
 
 import { useSession, signIn, signOut } from 'next-auth/react';
