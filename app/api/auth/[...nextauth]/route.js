@@ -11,10 +11,22 @@ export const authOptions = {
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: "/login", // Custom login page
+    error: "/login", // Redirect errors to login page
   },
   callbacks: {
+    async signIn({ user, account, profile }) {
+      const allowedDomains = ["kmitl.ac.th"]; // Define your allowed domains
+
+      if (user.email) {
+        const userDomain = user.email.split("@")[1];
+        if (allowedDomains.includes(userDomain)) {
+          return true; // Allow sign-in
+        }
+      }
+      return false; // Deny sign-in
+    },
     async redirect({ url, baseUrl }) {
-      // Redirect to home page after successful login
+      // Always redirect to home page after successful login
       return baseUrl;
     },
   },

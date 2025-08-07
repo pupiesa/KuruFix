@@ -15,11 +15,11 @@ const page = () => {
   return (
     <>
       <div className="flex items-center flex-col gap-y-2 h-screen">
-        <div className="p-3 bg-blue-600 rounded-full mt-34">
+        <div className="p-3 bg-blue-600 rounded-full mt-4">
           <Wrench className="w-8 h-8 " color="#FFFFFF" />
         </div>
-        <h1 className="text-2xl font-bold mb-2">เข้าสู่ระบบ</h1>
-        <p className="mb-8">ระบบแจ้งซ่อมครุภัณฑ์</p>
+        <h1 className="text-2xl font-bold">เข้าสู่ระบบ</h1>
+        <p className="mb-4">ระบบแจ้งซ่อมครุภัณฑ์</p>
         {/* <button onClick={() => signIn("google")}>Sign in with Google</button> */}
         <LoginCard signIn={signIn} />
       </div>

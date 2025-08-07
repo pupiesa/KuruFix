@@ -5,12 +5,15 @@ export default withAuth(function middleware(req) {}, {
     authorized: ({ token, req }) => {
       const { pathname } = req.nextUrl;
 
-      if (pathname === "/login" || pathname.startsWith("/api/auth/*")) {
+      if (pathname === "/login" || pathname.startsWith("/api/auth")) {
         return true;
       }
 
       return !!token;
     },
+  },
+  pages: {
+    signIn: "/login", // Redirect to /login when unauthorized
   },
 });
 

@@ -10,7 +10,7 @@ export default function HomePage() {
     return (
       <>
         {session.user ? (
-          <>
+          <div className="flex flex-col content-center">
             <h1>Welcome, {session.user.name}!</h1>
             <Image
               src={session.user.image}
@@ -21,7 +21,7 @@ export default function HomePage() {
             />
             <p>Email: {session.user.email}</p>
             <button onClick={() => signOut()}>Sign out</button>
-          </>
+          </div>
         ) : (
           <p>Loading...</p>
         )}
