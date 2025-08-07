@@ -1,20 +1,12 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
 import LoginCard from "../components/LoginCard";
 import { Wrench } from "lucide-react";
 
 const page = () => {
   const { data: session, status } = useSession();
-  const router = useRouter();
-  useEffect(() => {
-    if (session) {
-      router.push("/");
-    }
-  }, [session, router]);
-
   if (status === "loading") return <p>Loading...</p>;
 
   if (session) {

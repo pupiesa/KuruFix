@@ -3,18 +3,8 @@
 import { useSession, signOut } from "next-auth/react";
 import Image from "next/image";
 
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-
 export default function HomePage() {
-  const { data: session, status } = useSession();
-  const router = useRouter();
-  useEffect(() => {
-    if (status == "unauthenticated") {
-      router.push("/login");
-    }
-  }, [status, router]);
-  if (status === "loading") return <p>Loading...</p>;
+  const { data: session } = useSession();
 
   if (session) {
     return (

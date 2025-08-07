@@ -9,6 +9,15 @@ export const authOptions = {
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
+  pages: {
+    signIn: "/login", // Custom login page
+  },
+  callbacks: {
+    async redirect({ url, baseUrl }) {
+      // Redirect to home page after successful login
+      return baseUrl;
+    },
+  },
 };
 
 const handler = NextAuth(authOptions);
