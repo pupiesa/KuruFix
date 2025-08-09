@@ -21,10 +21,10 @@ const LoginCard = (props) => {
         <CardHeader className="">
           <CardTitle>ยินดีต้อนรับ</CardTitle>
           <CardDescription>
-            เข้าสู่ระบบเพื่อแจ้งซ่อมและติดตามสถานะ
+            เข้าสู่ระบบเพื่อแจ้งซ่อมและติดตามสถานะการซ่อมแซม
           </CardDescription>
           <CardAction>
-            <Button variant="link">Sign Up</Button>
+            <Button variant="link">สมัครสมาชิก</Button>
           </CardAction>
         </CardHeader>
         <CardContent>
@@ -46,7 +46,7 @@ const LoginCard = (props) => {
                     href="#"
                     className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
                   >
-                    Forgot your password?
+                    ลืมรหัสผ่าน ?
                   </a>
                 </div>
                 <Input id="password" type="password" required />
@@ -57,7 +57,7 @@ const LoginCard = (props) => {
         <CardFooter className="flex-col gap-2">
           <Button type="submit" className="w-full">
             <LogIn />
-            Login
+            เข้าสู่ระบบ
           </Button>
           <Button
             variant="outline"
