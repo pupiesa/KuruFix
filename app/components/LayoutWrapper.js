@@ -16,10 +16,11 @@ export default function LayoutWrapper({ children }) {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <SidebarTrigger />
-      <div className="flex flex-col flex-1 h-10 w-screen">
-        <Navmenu className="w-full" />
-        <main className="p-4 flex-1">{children}</main>
+      <div className="flex flex-col flex-1 min-w-0">
+        <div className="flex items-center gap-2 p-2">
+          <SidebarTrigger className="shrink-0" />
+        </div>
+        <main className="p-4 flex-1 min-w-0">{children}</main>
       </div>
     </SidebarProvider>
   );

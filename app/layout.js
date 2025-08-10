@@ -3,6 +3,7 @@ import "./globals.css";
 import { SessionProviders } from "./components/wrapper/SessionProviders";
 import { ThemeProvider } from "./components/wrapper/ThemeProvider";
 import LayoutWrapper from "./components/LayoutWrapper";
+import { ToastProvider } from "@/hooks/use-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +31,9 @@ export default function RootLayout({ children }) {
             enableSystem
             disableTransitionOnChange
           >
-            <LayoutWrapper>{children}</LayoutWrapper>
+            <ToastProvider>
+              <LayoutWrapper>{children}</LayoutWrapper>
+            </ToastProvider>
           </ThemeProvider>
         </SessionProviders>
       </body>

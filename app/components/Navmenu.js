@@ -10,20 +10,21 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
-// Clean nav bar with right-aligned action button
 export function Navmenu({ className = "" }) {
+  const pathname = usePathname().replace(/[^a-zA-Z]/g, "");
   return (
     <NavigationMenu
       viewport={false}
       className={
-        "sticky top-0 z-30 flex w-full items-center justify-between border-b bg-background/80 px-4 py-1 backdrop-blur supports-[backdrop-filter]:bg-background/60 " +
+        "sticky top-0 z-30 flex w-full items-center justify-between border-b-1 border-[color:oklch(var(--sidebar-foreground))] px-6 py-2 backdrop-blur" +
         className
       }
     >
       <NavigationMenuList className="flex items-center gap-2">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+          <NavigationMenu>{pathname ? pathname : "home"}</NavigationMenu>
         </NavigationMenuItem>
       </NavigationMenuList>
       <Button className="gap-2" size="sm">
@@ -33,5 +34,3 @@ export function Navmenu({ className = "" }) {
     </NavigationMenu>
   );
 }
-
-// Placeholder export removed corrupted ListItem; restore only if needed later.

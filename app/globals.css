@@ -77,6 +77,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --btn1: oklch(73.902% 0.11247 225.412);
+  --nav-border: 0 0% 60%;
 }
 
 .dark {
@@ -112,6 +113,7 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
   --btn1: oklch(73.902% 0.11247 225.412);
+  --nav-border: 0 0% 25%;
 }
 
 @layer base {
