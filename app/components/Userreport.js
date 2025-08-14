@@ -128,13 +128,9 @@ export default function Userreport() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Wrench className="w-8 h-8 text-blue-600" />
-              <h1 className="text-3xl font-bold text-gray-900">
-                ระบบแจ้งซ่อมครุภัณฑ์
-              </h1>
+              <h1 className="text-3xl font-bold">ระบบแจ้งซ่อมครุภัณฑ์</h1>
             </div>
-            <p className="text-gray-600">
-              แจ้งปัญหาและติดตามสถานะการซ่อมครุภัณฑ์ของคุณ
-            </p>
+            <p className="">แจ้งปัญหาและติดตามสถานะการซ่อมครุภัณฑ์ของคุณ</p>
           </div>
         </div>
 
@@ -256,7 +252,7 @@ export default function Userreport() {
 
                   <Button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                   >
                     ส่งคำขอซ่อม
                   </Button>
